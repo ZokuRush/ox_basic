@@ -1,10 +1,10 @@
-ALTER DATABASE {{dbName}}
+ALTER DATABASE oxserver
 	DEFAULT CHARACTER SET UTF8MB4;
 	
-ALTER DATABASE {{dbName}}
+ALTER DATABASE oxserver
 	DEFAULT COLLATE UTF8MB4_UNICODE_CI;
 
-USE `{{dbName}}`;
+USE `oxserver`;
 
 CREATE TABLE `users` (
 	`identifier` VARCHAR(60) NOT NULL,
@@ -214,7 +214,7 @@ CREATE TABLE `addon_inventory_items` (
 	INDEX `index_addon_inventory_items_inventory_name_name` (`inventory_name`, `name`),
 	INDEX `index_addon_inventory_items_inventory_name_name_owner` (`inventory_name`, `name`, `owner`),
 	INDEX `index_addon_inventory_inventory_name` (`inventory_name`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE `datastore` (
 	`name` VARCHAR(60) NOT NULL,
