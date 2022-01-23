@@ -206,7 +206,7 @@ INSERT INTO `addon_inventory` (name, label, shared) VALUES
 CREATE TABLE `addon_inventory_items` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`inventory_name` VARCHAR(100) NOT NULL,
-	`name` VARCHAR(100) NOT NULL,
+	`name` VARCHAR(50) NOT NULL,
 	`count` INT NOT NULL,
 	`owner` VARCHAR(60) DEFAULT NULL,
 
